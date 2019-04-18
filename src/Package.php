@@ -10,9 +10,9 @@ declare(strict_types=1);
 namespace Ixocreate\CommandBus\Package;
 
 use Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem;
-use Ixocreate\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Package\PackageInterface;
-use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
+use Ixocreate\Application\PackageInterface;
+use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 
 final class Package implements PackageInterface
