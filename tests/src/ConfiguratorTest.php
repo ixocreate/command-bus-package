@@ -11,16 +11,16 @@ namespace Ixocreate\Test\CommandBus;
 
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\Config;
-use Ixocreate\CommandBus\Configurator;
+use Ixocreate\CommandBus\CommandBusConfigurator;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
-use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerConfig;
 use PHPUnit\Framework\TestCase;
 
 class ConfiguratorTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Configurator
+     * @covers \Ixocreate\CommandBus\CommandBusConfigurator
      */
     public function testConfigurator()
     {
@@ -30,7 +30,7 @@ class ConfiguratorTest extends TestCase
             $collector[$name] = $object;
         });
 
-        $configurator = new Configurator();
+        $configurator = new CommandBusConfigurator();
         $configurator->addHandler('handler1', null, 5);
         $configurator->addHandler('handler2', null, 10);
         $configurator->addHandler('handler3', null, 1);

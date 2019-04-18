@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus;
 
-use Ixocreate\CommandBus\CommandInterface;
-use Ixocreate\CommandBus\DispatchInterface;
-use Ixocreate\CommandBus\HandlerInterface;
-use Ixocreate\CommandBus\ResultInterface;
 use Ixocreate\Filter\Filter;
 
 final class FilterHandler implements HandlerInterface

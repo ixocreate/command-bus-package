@@ -7,20 +7,19 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus\Bootstrap;
+namespace Ixocreate\CommandBus;
 
-use Ixocreate\Application\Service\Bootstrap\BootstrapItemInterface;
-use Ixocreate\Application\Service\Configurator\ConfiguratorInterface;
-use Ixocreate\CommandBus\Configurator;
+use Ixocreate\Application\BootstrapItemInterface;
+use Ixocreate\Application\ConfiguratorInterface;
 
-final class BootstrapItem implements BootstrapItemInterface
+final class CommandBusBootstrapItem implements BootstrapItemInterface
 {
     /**
      * @return mixed
      */
     public function getConfigurator(): ConfiguratorInterface
     {
-        return new Configurator();
+        return new CommandBusConfigurator();
     }
 
     /**

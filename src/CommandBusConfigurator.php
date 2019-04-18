@@ -9,15 +9,14 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus;
 
-use Ixocreate\CommandBus\Config;
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
-use Ixocreate\Application\Service\Configurator\ConfiguratorInterface;
-use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
+use Ixocreate\Application\ConfiguratorInterface;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\Application\Service\SubManagerConfigurator;
 use Zend\Stdlib\PriorityList;
 
-final class Configurator implements ConfiguratorInterface
+final class CommandBusConfigurator implements ConfiguratorInterface
 {
     /**
      * @var PriorityList

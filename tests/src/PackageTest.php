@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\Bootstrap\BootstrapItem;
-use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
-use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
+use Ixocreate\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\CommandBus\CommandBusBootstrapItem;
+use Ixocreate\CommandBus\Package;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
-use Ixocreate\CommandBus;
 use PHPUnit\Framework\TestCase;
 
 class PackageTest extends TestCase
@@ -29,7 +29,7 @@ class PackageTest extends TestCase
         $package->addServices($serviceRegistry);
         $package->boot($serviceManager);
 
-        $this->assertSame([BootstrapItem::class], $package->getBootstrapItems());
+        $this->assertSame([CommandBusBootstrapItem::class], $package->getBootstrapItems());
         $this->assertNull($package->getConfigDirectory());
         $this->assertNull($package->getConfigProvider());
         $this->assertNull($package->getDependencies());

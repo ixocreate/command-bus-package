@@ -7,16 +7,16 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Test\CommandBus\BootstrapItem;
+namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\Bootstrap\BootstrapItem;
-use Ixocreate\CommandBus\Configurator;
+use Ixocreate\CommandBus\CommandBusBootstrapItem;
+use Ixocreate\CommandBus\CommandBusConfigurator;
 use PHPUnit\Framework\TestCase;
 
 class BootstrapItemTest extends TestCase
 {
     /**
-     * @var BootstrapItem
+     * @var CommandBusBootstrapItem
      */
     private $bootstrapItem;
 
@@ -25,19 +25,19 @@ class BootstrapItemTest extends TestCase
      */
     public function setUp()
     {
-        $this->bootstrapItem = new BootstrapItem();
+        $this->bootstrapItem = new CommandBusBootstrapItem();
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getConfigurator
+     * @covers \Ixocreate\CommandBus\CommandBusBootstrapItem::getConfigurator
      */
     public function testGetConfigurator()
     {
-        $this->assertInstanceOf(Configurator::class, $this->bootstrapItem->getConfigurator());
+        $this->assertInstanceOf(CommandBusConfigurator::class, $this->bootstrapItem->getConfigurator());
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getFileName
+     * @covers \Ixocreate\CommandBus\CommandBusBootstrapItem::getFileName
      */
     public function testGetFilename()
     {
@@ -45,7 +45,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getVariableName
+     * @covers \Ixocreate\CommandBus\CommandBusBootstrapItem::getVariableName
      */
     public function testGetVariableName()
     {
