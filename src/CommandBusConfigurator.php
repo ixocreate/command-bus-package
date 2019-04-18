@@ -11,7 +11,7 @@ namespace Ixocreate\CommandBus;
 
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
-use Ixocreate\Application\ConfiguratorInterface;
+use Ixocreate\Application\Configurator\ConfiguratorInterface;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\Application\Service\SubManagerConfigurator;
 use Zend\Stdlib\PriorityList;
