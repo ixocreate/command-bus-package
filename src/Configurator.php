@@ -7,14 +7,14 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus;
+namespace Ixocreate\CommandBus\Package;
 
-use Ixocreate\Package\CommandBus\Command\CommandSubManager;
-use Ixocreate\Package\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\CommandBus\Package\Command\CommandSubManager;
+use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
 use Ixocreate\Application\ConfiguratorInterface;
 use Ixocreate\Application\ServiceRegistryInterface;
-use Ixocreate\Package\CommandBus\CommandInterface;
-use Ixocreate\Package\CommandBus\HandlerInterface;
+use Ixocreate\CommandBus\Package\CommandInterface;
+use Ixocreate\CommandBus\Package\HandlerInterface;
 use Ixocreate\ServiceManager\SubManager\SubManagerConfigurator;
 use Zend\Stdlib\PriorityList;
 

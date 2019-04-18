@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus;
+namespace Ixocreate\CommandBus\Package;
 
 use Ixocreate\Application\Console\CommandInterface;;
 use Ixocreate\CommandBus\DispatchInterface;

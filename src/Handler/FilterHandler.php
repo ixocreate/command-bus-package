@@ -7,13 +7,13 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus;
+namespace Ixocreate\CommandBus\Package;
 
 use Ixocreate\Application\Console\CommandInterface;;
 use Ixocreate\CommandBus\DispatchInterface;
 use Ixocreate\CommandBus\HandlerInterface;
 use Ixocreate\CommandBus\ResultInterface;
-use Ixocreate\Package\Filter\Filter;
+use Ixocreate\Filter\Package\Filter;
 
 final class FilterHandler implements HandlerInterface
 {

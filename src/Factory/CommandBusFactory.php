@@ -7,12 +7,12 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus\Factory;
+namespace Ixocreate\CommandBus\Package\Factory;
 
-use Ixocreate\Package\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Package\Command\CommandSubManager;
 use Ixocreate\CommandBus\CommandBus;
 use Ixocreate\CommandBus\Config;
-use Ixocreate\Package\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 

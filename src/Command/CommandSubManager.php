@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus\Command;
+namespace Ixocreate\CommandBus\Package\Command;
 
 use Ixocreate\ServiceManager\SubManager\SubManager;
 

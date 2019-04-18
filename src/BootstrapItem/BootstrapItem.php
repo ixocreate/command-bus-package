@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus\BootstrapItem;
+namespace Ixocreate\CommandBus\Package\BootstrapItem;
 
-use Ixocreate\Application\BootstrapItemInterface;
+use Ixocreate\Application\Bootstrap\BootstrapItemInterface;
 use Ixocreate\Application\ConfiguratorInterface;
-use Ixocreate\Package\CommandBus\Configurator;
+use Ixocreate\CommandBus\Package\Configurator;
 
 final class BootstrapItem implements BootstrapItemInterface
 {
