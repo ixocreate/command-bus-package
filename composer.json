@@ -1,5 +1,5 @@
 {
-    "name": "ixocreate/command-bus-package",
+    "name": "ixocreate/command-bus",
     "description": "IXOCREATE Command Bus Package",
     "license": "MIT",
     "type": "library",
@@ -12,7 +12,9 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "ixocreate/command-bus": "dev-develop"
+        "ixocreate/application": "dev-consolidate",
+        "ixocreate/command-bus": "dev-consolidate",
+        "ixocreate/validation": "dev-consolidate"
     },
     "require-dev": {
         "ixocreate/coding-standard": "^1.0",
