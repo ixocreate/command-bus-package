@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-namespace Ixocreate\CommandBus\Package;
+namespace Ixocreate\CommandBus;
 
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\CommandBus\Package\Command\CommandSubManager;
-use Ixocreate\CommandBus\Package\Factory\CommandBusFactory;
-use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Factory\CommandBusFactory;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 
 /** @var ServiceManagerConfigurator $serviceManager */

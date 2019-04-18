@@ -7,10 +7,11 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus\Package;
+namespace Ixocreate\CommandBus;
 
-use Ixocreate\CommandBus\Package\Command\CommandSubManager;
-use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use Ixocreate\Application\Service\Configurator\ConfiguratorInterface;
 use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\Application\Service\SubManagerConfigurator;

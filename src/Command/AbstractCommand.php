@@ -7,9 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus\Package\Command;
+namespace Ixocreate\CommandBus\Command;
 
-use Ixocreate\Application\Console\CommandInterface;
+use Ixocreate\CommandBus\CommandInterface;
 use Ramsey\Uuid\Uuid;
 
 abstract class AbstractCommand implements CommandInterface

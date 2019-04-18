@@ -7,9 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus\Package;
+namespace Ixocreate\CommandBus;
 
-use Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem;
+use Ixocreate\CommandBus\Bootstrap\BootstrapItem;
 use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
 use Ixocreate\Application\PackageInterface;
 use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
