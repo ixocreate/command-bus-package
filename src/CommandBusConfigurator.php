@@ -12,7 +12,9 @@ namespace Ixocreate\CommandBus;
 use Ixocreate\Application\Configurator\ConfiguratorInterface;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\Application\Service\SubManagerConfigurator;
+use Ixocreate\CommandBus\Command\CommandInterface;
 use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Handler\HandlerInterface;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use Zend\Stdlib\PriorityList;
 
@@ -62,7 +64,7 @@ final class CommandBusConfigurator implements ConfiguratorInterface
      */
     public function registerService(ServiceRegistryInterface $serviceRegistry): void
     {
-        $serviceRegistry->add(Config::class, new Config([
+        $serviceRegistry->add(CommandBusConfig::class, new CommandBusConfig([
             'handlers' => \array_keys($this->handlers->toArray()),
         ]));
 

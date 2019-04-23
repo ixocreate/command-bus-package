@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace Ixocreate\Test\CommandBus\Factory;
 
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\CommandBusConfig;
 use Ixocreate\CommandBus\Factory\CommandBusFactory;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use PHPUnit\Framework\TestCase;
@@ -25,8 +25,8 @@ final class CommandBusFactoryTest extends TestCase
     {
         $container = $this->createMock(ServiceManagerInterface::class);
         $container->method("get")->willReturnCallback(function ($param) {
-            if ($param === Config::class) {
-                return new Config([]);
+            if ($param === CommandBusConfig::class) {
+                return new CommandBusConfig([]);
             }
             return $this->createMock(ContainerInterface::class);
         });

@@ -12,7 +12,7 @@ namespace Ixocreate\CommandBus;
 use Ixocreate\Application\Service\SerializableServiceInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-final class Config implements SerializableServiceInterface
+final class CommandBusConfig implements CommandBusConfigInterface, SerializableServiceInterface
 {
     private $config = [];
 

@@ -7,9 +7,12 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus;
+namespace Ixocreate\CommandBus\Handler;
 
+use Ixocreate\CommandBus\Command\CommandInterface;
+use Ixocreate\CommandBus\Dispatch\DispatchInterface;
 use Ixocreate\CommandBus\Result\Result;
+use Ixocreate\CommandBus\Result\ResultInterface;
 use Ixocreate\Validation\Validator;
 
 final class ValidationHandler implements HandlerInterface
