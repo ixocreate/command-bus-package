@@ -11,7 +11,7 @@ namespace Ixocreate\CommandBus\Factory;
 
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\CommandBusConfig;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use Ixocreate\ServiceManager\FactoryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
@@ -27,7 +27,7 @@ final class CommandBusFactory implements FactoryInterface
     public function __invoke(ServiceManagerInterface $container, $requestedName, array $options = null)
     {
         return new CommandBus(
-            $container->get(Config::class),
+            $container->get(CommandBusConfig::class),
             $container->get(HandlerSubManager::class),
             $container->get(CommandSubManager::class)
         );

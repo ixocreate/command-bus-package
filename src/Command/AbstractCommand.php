@@ -9,10 +9,10 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Command;
 
-use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\ServiceManager\NamedServiceInterface;
 use Ramsey\Uuid\Uuid;
 
-abstract class AbstractCommand implements CommandInterface
+abstract class AbstractCommand implements CommandInterface, NamedServiceInterface
 {
     /**
      * @var string

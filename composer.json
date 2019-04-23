@@ -1,5 +1,5 @@
 {
-    "name": "ixocreate/command-bus",
+    "name": "ixocreate/command-bus-package",
     "description": "IXOCREATE Command Bus Package",
     "license": "MIT",
     "type": "library",
@@ -8,17 +8,15 @@
             "name": "IXOCREATE"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": "^7.1",
         "ixocreate/application": "^0.1",
-        "ixocreate/command-bus": "^0.1",
+        "ixocreate/command-bus": "^0.2",
         "ixocreate/filter-package": "^0.1",
         "ixocreate/validation-package": "^0.1"
     },
     "require-dev": {
-        "ixocreate/coding-standard": "^1.0",
+        "ixocreate/coding-standard": "^2.0",
         "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^7.0"
     },
@@ -26,6 +24,9 @@
         "psr-4": {
             "Ixocreate\\CommandBus\\": "src/"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "scripts": {
         "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config vendor/ixocreate/coding-standard/.php_cs"

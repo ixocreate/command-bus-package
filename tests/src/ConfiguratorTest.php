@@ -13,7 +13,7 @@ use Ixocreate\Application\Service\ServiceManagerConfig;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\CommandBusConfigurator;
-use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\CommandBusConfig;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use PHPUnit\Framework\TestCase;
 
@@ -40,14 +40,14 @@ class ConfiguratorTest extends TestCase
 
         $configurator->registerService($serviceRegistry);
 
-        $this->assertArrayHasKey(Config::class, $collector);
+        $this->assertArrayHasKey(CommandBusConfig::class, $collector);
         $this->assertArrayHasKey(HandlerSubManager::class . '::Config', $collector);
         $this->assertArrayHasKey(CommandSubManager::class . '::Config', $collector);
-        $this->assertInstanceOf(Config::class, $collector[Config::class]);
+        $this->assertInstanceOf(CommandBusConfig::class, $collector[CommandBusConfig::class]);
         $this->assertInstanceOf(ServiceManagerConfig::class, $collector[HandlerSubManager::class . '::Config']);
         $this->assertInstanceOf(ServiceManagerConfig::class, $collector[CommandSubManager::class . '::Config']);
 
-        $this->assertSame(['handler2', 'handler1', 'handler3'], $collector[Config::class]->handlers());
+        $this->assertSame(['handler2', 'handler1', 'handler3'], $collector[CommandBusConfig::class]->handlers());
         $this->assertArrayHasKey('handler1', $collector[HandlerSubManager::class . '::Config']->getFactories());
         $this->assertArrayHasKey('handler2', $collector[HandlerSubManager::class . '::Config']->getFactories());
         $this->assertArrayHasKey('handler3', $collector[HandlerSubManager::class . '::Config']->getFactories());
