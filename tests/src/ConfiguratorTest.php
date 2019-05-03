@@ -12,8 +12,8 @@ namespace Ixocreate\Test\CommandBus;
 use Ixocreate\Application\Service\ServiceManagerConfig;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
 use Ixocreate\CommandBus\Command\CommandSubManager;
-use Ixocreate\CommandBus\CommandBusConfigurator;
 use Ixocreate\CommandBus\CommandBusConfig;
+use Ixocreate\CommandBus\CommandBusConfigurator;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use PHPUnit\Framework\TestCase;
 
