@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus;
 
-use Ixocreate\Application\Service\ServiceManagerConfigurator;
+use Ixocreate\Application\ServiceManager\ServiceManagerConfigurator;
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\Factory\CommandBusFactory;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;

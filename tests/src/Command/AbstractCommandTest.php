@@ -17,7 +17,7 @@ class AbstractCommandTest extends TestCase
 {
     private $command;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = $this->getMockForAbstractClass(AbstractCommand::class);
     }

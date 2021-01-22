@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\Application\Service\ServiceManagerConfig;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
+use Ixocreate\Application\ServiceManager\SubManagerConfig;
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\CommandBusConfig;
 use Ixocreate\CommandBus\CommandBusConfigurator;
@@ -44,8 +44,8 @@ class ConfiguratorTest extends TestCase
         $this->assertArrayHasKey(HandlerSubManager::class . '::Config', $collector);
         $this->assertArrayHasKey(CommandSubManager::class . '::Config', $collector);
         $this->assertInstanceOf(CommandBusConfig::class, $collector[CommandBusConfig::class]);
-        $this->assertInstanceOf(ServiceManagerConfig::class, $collector[HandlerSubManager::class . '::Config']);
-        $this->assertInstanceOf(ServiceManagerConfig::class, $collector[CommandSubManager::class . '::Config']);
+        $this->assertInstanceOf(SubManagerConfig::class, $collector[HandlerSubManager::class . '::Config']);
+        $this->assertInstanceOf(SubManagerConfig::class, $collector[CommandSubManager::class . '::Config']);
 
         $this->assertSame(['handler2', 'handler1', 'handler3'], $collector[CommandBusConfig::class]->handlers());
         $this->assertArrayHasKey('handler1', $collector[HandlerSubManager::class . '::Config']->getFactories());

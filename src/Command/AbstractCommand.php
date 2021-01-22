@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Command;
 
-use Ixocreate\ServiceManager\NamedServiceInterface;
+use Ixocreate\Application\ServiceManager\NamedServiceInterface;
 use Ramsey\Uuid\Uuid;
 
 abstract class AbstractCommand implements CommandInterface, NamedServiceInterface

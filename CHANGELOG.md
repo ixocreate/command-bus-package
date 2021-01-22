@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/ixocreate/command-bus-package/compare/0.2.2...develop)
+## [Unreleased](https://github.com/ixocreate/command-bus-package/compare/0.3.0...develop)
+
+## [v0.3.0 (2021-01-21)](https://github.com/ixocreate/event-package/compare/0.2.2...0.3.0)
+### Update
+- Update to Application 0.3
 
 ## [v0.2.2 (2019-05-03)](https://github.com/ixocreate/command-bus-package/compare/0.2.1...0.2.2)
 ### Added

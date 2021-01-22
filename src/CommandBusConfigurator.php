@@ -11,12 +11,12 @@ namespace Ixocreate\CommandBus;
 
 use Ixocreate\Application\Configurator\ConfiguratorInterface;
 use Ixocreate\Application\Service\ServiceRegistryInterface;
-use Ixocreate\Application\Service\SubManagerConfigurator;
+use Ixocreate\Application\ServiceManager\SubManagerConfigurator;
 use Ixocreate\CommandBus\Command\CommandInterface;
 use Ixocreate\CommandBus\Command\CommandSubManager;
 use Ixocreate\CommandBus\Handler\HandlerInterface;
 use Ixocreate\CommandBus\Handler\HandlerSubManager;
-use Zend\Stdlib\PriorityList;
+use Laminas\Stdlib\PriorityList;
 
 final class CommandBusConfigurator implements ConfiguratorInterface
 {
