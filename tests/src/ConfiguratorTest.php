@@ -35,7 +35,7 @@ class ConfiguratorTest extends TestCase
         $configurator->addHandler('handler2', null, 10);
         $configurator->addHandler('handler3', null, 1);
 
-        $configurator->addCommand("command1");
+        $configurator->addCommand('command1');
         $configurator->addCommandDirectory(__DIR__);
 
         $configurator->registerService($serviceRegistry);

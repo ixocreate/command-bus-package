@@ -27,7 +27,7 @@ final class CommandBusBootstrapItem implements BootstrapItemInterface
      */
     public function getVariableName(): string
     {
-        return "commandBus";
+        return 'commandBus';
     }
 
     /**
@@ -35,6 +35,6 @@ final class CommandBusBootstrapItem implements BootstrapItemInterface
      */
     public function getFileName(): string
     {
-        return "command-bus.php";
+        return 'command-bus.php';
     }
 }

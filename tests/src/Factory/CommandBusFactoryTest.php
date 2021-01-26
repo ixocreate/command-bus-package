@@ -24,7 +24,7 @@ final class CommandBusFactoryTest extends TestCase
     public function testFactory()
     {
         $container = $this->createMock(ServiceManagerInterface::class);
-        $container->method("get")->willReturnCallback(function ($param) {
+        $container->method('get')->willReturnCallback(function ($param) {
             if ($param === CommandBusConfig::class) {
                 return new CommandBusConfig([]);
             }
