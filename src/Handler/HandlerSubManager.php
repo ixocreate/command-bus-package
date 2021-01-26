@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Handler;
 
-use Ixocreate\ServiceManager\SubManager\SubManager;
+use Ixocreate\ServiceManager\SubManager\AbstractSubManager;
 
-final class HandlerSubManager extends SubManager
+final class HandlerSubManager extends AbstractSubManager
 {
 }
