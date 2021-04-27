@@ -17,17 +17,17 @@ abstract class AbstractCommand implements CommandInterface, NamedServiceInterfac
     /**
      * @var string
      */
-    private $uuid;
+    protected $uuid;
 
     /**
      * @var \DateTimeInterface
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var array
      */
-    private $data;
+    protected $data;
 
     /**
      * @throws \Exception
